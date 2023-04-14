@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Evènement Details</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.svg" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top header-inner-pages">
+      <div class="container d-flex align-items-center justify-content-between">
+        <h1 class="logo"><a href="index.html"><img src="assets/img/mylogo1.jpeg" class="img-fluid animated" alt=""></a></h1>
+        <nav id="navbar" class="navbar">     
+            <ul>
+              <li><a class="nav-link scrollto active" href="index.html">Accueil</a></li>
+              <li><a class="nav-link scrollto" href="index.html#features">À propos</a></li>
+              <li><a class="nav-link scrollto " href="index.html#eventstiket">Evènements</a></li>
+              <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
+              <li><a class="getstarted scrollto" href="#features">Commencer</a></li>
+            </ul>
+          
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+      </div>
+    </header><!-- End Header -->
+
+    <main id="main">
+
+      <!-- ======= Breadcrumbs ======= -->
+      <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+          <div class="d-flex justify-content-between align-items-center"
+            id="enteteTicket">
+            <h2>Evènement Details</h2>
+            <ol>
+              <li><a href="index.html#eventstiket">Evènement</a></li>
+              <li>evènement Details</li>
+            </ol>
+          </div>
+
+        </div>
+      </section><!-- End Breadcrumbs -->
+
+      <!-- ======= Portfolio Details Section ======= -->
+      <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+
+          <span id="ticketselect"></span>
+
+        </div>
+      </section><!-- End Portfolio Details Section -->
+
+    </main><!-- End #main -->
+
+    <!-- Button trigger modal -->
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+  
+            <div class="col-lg-4 col-md-6 footer-contact">
+              <h3><img src="assets/img/mylogo1.jpeg" class="img-fluid animated" alt=""></h3>
+              <p>
+               Cotonou<br>
+               Bénin <br>
+                <strong>Phone:</strong> +1 5589 55488 55<br>
+                <strong>Email:</strong> info@example.com<br>
+              </p>
+            </div>
+  
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Les liens</h4>
+              <ul>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Accueil</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">À propos</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Evènements</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Contact</a></li>
+              </ul>
+            </div>
+  
+            <div class="col-lg-5 col-md-6 footer-newsletter">
+              <h4>S'inscrire à notre lettre d'information</h4>
+              <p>Vous serez informé chaque que nous publions des nouveaux évènement.</p>
+              <form action="" method="post">
+                <input type="email" name="email"><input type="submit" value="S'inscrire">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="container">
+  
+        <div class="copyright-wrap d-md-flex py-4">
+          <div class="me-md-auto text-center text-md-start">
+            <div class="copyright">
+              &copy; Copyright <strong><span>BeCare</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+              Designed by <a href="https://bootstrapmade.com/">BeCare</a>
+            </div>
+          </div>
+          <div class="social-links text-center text-md-right pt-3 pt-md-0">
+            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          </div>
+        </div>
+  
+      </div>
+    </footer><!-- End Footer -->
+    <script>
+     function tacketselectid(id){
+      openKkiapayWidget({
+                amount: `${id}`,
+                position: "center",
+                callback: "javascript:sendmycommandinCentremodale()",
+                data: "",
+                theme: "blue",
+                key: "deb48fc468f8e7fcc35aee7ae721254a3427f5e5",
+              });
+     }
+  </script>
+    <a href="#" class="back-to-top d-flex align-items-center
+      justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <div id="preloader"></div>
+    <script type="module">
+
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+    apiKey: "AIzaSyBgXAoquFpq6S4ThjP-_sNRg5TRif7BqTo",
+    authDomain: "becare-e39ac.firebaseapp.com",
+    databaseURL: "https://becare-e39ac-default-rtdb.firebaseio.com",
+    projectId: "becare-e39ac",
+    storageBucket: "becare-e39ac.appspot.com",
+    messagingSenderId: "111120253032",
+    appId: "1:111120253032:web:023f6584868cf57d6cbbdd"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+
+
+    import {
+        getDatabase,
+        ref,
+        set,
+        update,
+        child,
+        onValue,
+        remove,
+        get,
+    } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+
+    import { getStorage, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-storage.js"
+
+    const db = getDatabase();
+
+    //--------------Select data-----------------//
+
+    function seleectData() {
+      const UserConnectIdToBuy = localStorage.getItem("storageNamey");
+      //alert(UserConnectIdToBuy)
+        const dbref = ref(db);
+        get(child(dbref, "Thedatas/" + UserConnectIdToBuy))
+            .then((snapshot) => {
+                if (snapshot.exists()) {
+                  document.getElementById('ticketselect').innerHTML = 
+                  `
+                  <div class="row gy-4">
+                  <div class="col-lg-8">
+                    <div class="portfolio-details-slider swiper">
+                      <div class="swiper-wrapper align-items-center">
+
+                        <div class="swiper">
+                          <img src="${snapshot.val().RollNo}" alt="" style="height: 90vh;">
+                        </div>
+                      </div>
+                      <div class="swiper-pagination"></div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4" id="murstdo">
+                    <div class="portfolio-info" id="murstdoa">
+                      <div style="display: flex; margin-right: 30vh;"> <h3 style="margin-right: 12vh;"><button class="btn btn-danger">information</button></h3> <h3> <button class="btn btn-danger" style="display:flex" href="#modal" data-bs-toggle="modal" ><i class="bi bi-clipboard-check-fill"></i><p>&nbsp;Payer</p> </button></h3></div>
+                      <ul>
+                        <li style="color: aliceblue;"><strong> Nom</strong>: ${snapshot.val().NameOfstd}</li><hr style="color: blue;">             
+                        <li style="color: aliceblue;"><strong>Date du début</strong>: ${snapshot.val().Datestart} à ${snapshot.val().Hourstart}</li><hr style="color: blue;">
+                        <li style="color: aliceblue;"><strong>Date de la fin</strong>: ${snapshot.val().Dateend} à ${snapshot.val().Hourend}</li><hr style="color: blue;">
+                        <li style="color: aliceblue;"><strong>Lieu</strong>: ${snapshot.val().Category}</li><hr style="color: blue;">
+                        <li style="color: aliceblue;"><strong>Prix VIP</strong>: <a href="#">${snapshot.val().Prix} FCFA</a></li><hr style="color: blue;">
+                        <li style="color: aliceblue;"><strong>Prix</strong>: <a href="#">${snapshot.val().PrixPromo} FCFA</a></li><hr style="color: blue;">
+                      </ul>
+                      <div id="faq" class="faq">
+                      <div class="">
+                        <div class="faq-list">
+                          <ul>
+                            <li>
+                              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Description<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                              <div id="faq-list-1" class="collapse " data-bs-parent=".faq-list">
+                                <p>
+                                  ${snapshot.val().Genboxtextarea}
+                                </p>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                  </div>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="modal" aria-hidden="true" aria-labelledby="..." tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <!-- Toogle to second dialog -->
+                        <button class="btn btn-danger myClasidpayer" data-bs-dismiss="modal" id="${snapshot.val().PrixPromo}"onclick="tacketselectid(this.id)">
+                          <i class="bi bi-credit-card-fill"></i>
+                            Tiket</button><br>
+                        <button class="btn btn-primary myClasidpayer" data-bs-dismiss="modal"
+                          id="${snapshot.val().Prix}" onclick="tacketselectid(this.id)"> <i class="bi bi-credit-card-fill"></i> Tiket VIP</button>
+                      </div>
+                    </div>
+                  </div>
+                  `
+                } else {
+                    alert("no data");
+                }
+            })
+            .catch((error) => {
+                alert("il y a une ERROR " + error);
+            });
+    }
+    window.onload = seleectData;
+    </script>
+    <script src="https://cdn.kkiapay.me/k.js"></script>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-storage.js"></script>
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+  </body>
+
+</html>
