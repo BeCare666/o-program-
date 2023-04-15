@@ -226,8 +226,8 @@
                         <li style="color: aliceblue;"><strong>Date du début</strong>: ${snapshot.val().Datestart} à ${snapshot.val().Hourstart}</li><hr style="color: blue;">
                         <li style="color: aliceblue;"><strong>Date de la fin</strong>: ${snapshot.val().Dateend} à ${snapshot.val().Hourend}</li><hr style="color: blue;">
                         <li style="color: aliceblue;"><strong>Lieu</strong>: ${snapshot.val().Category}</li><hr style="color: blue;">
-                        <li style="color: aliceblue;"><strong>Prix VIP</strong>: <a href="#">${snapshot.val().Prix} FCFA</a></li><hr style="color: blue;">
-                        <li style="color: aliceblue;"><strong>Prix Simple</strong>: <a href="#">${snapshot.val().PrixPromo} FCFA</a></li><hr style="color: blue;">
+                        <li style="color: aliceblue;"><strong>Prix VIP</strong>: <a href="#"> ${snapshot.val().PrixPromo} FCFA</a></li><hr style="color: blue;">
+                        <li style="color: aliceblue;"><strong>Prix Simple</strong>: <a href="#">${snapshot.val().Prix}  FCFA</a></li><hr style="color: blue;">
                       </ul>
                       <div id="faq" class="faq">
                       <div class="">
@@ -254,11 +254,11 @@
                     <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">
                         <!-- Toogle to second dialog -->
-                        <button class="btn btn-danger myClasidpayer" data-bs-dismiss="modal" id="${snapshot.val().PrixPromo}"onclick="tacketselectid(this.id)">
+                        <button class="btn btn-danger myClasidpayer" data-bs-dismiss="modal" id="${snapshot.val().Prix}"onclick="tacketselectid(this.id)">
                           <i class="bi bi-credit-card-fill"></i>
                             Tiket Simple</button><br>
                         <button class="btn btn-primary myClasidpayer" data-bs-dismiss="modal"
-                          id="${snapshot.val().Prix}" onclick="tacketselectid(this.id)"> <i class="bi bi-credit-card-fill"></i> Tiket VIP</button>
+                          id="${snapshot.val().PrixPromo}" onclick="tacketselectid(this.id)"> <i class="bi bi-credit-card-fill"></i> Tiket VIP</button>
                       </div>
                     </div>
                   </div>
