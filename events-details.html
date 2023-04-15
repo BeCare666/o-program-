@@ -141,7 +141,10 @@
     </footer><!-- End Footer -->
     <script>
      function tacketselectid(id){
-      openKkiapayWidget({
+      if(!id){
+        alert("Il se peut que cet événement n'as de ticket. Merci.")
+      }else{
+        openKkiapayWidget({
                 amount: `${id}`,
                 position: "center",
                 callback: "javascript:sendmycommandinCentremodale()",
@@ -149,6 +152,7 @@
                 theme: "blue",
                 key: "deb48fc468f8e7fcc35aee7ae721254a3427f5e5",
               });
+      }
      }
   </script>
     <a href="#" class="back-to-top d-flex align-items-center
@@ -192,7 +196,6 @@
     const db = getDatabase();
 
     //--------------Select data-----------------//
-
     function seleectData() {
       const UserConnectIdToBuy = localStorage.getItem("storageNamey");
       //alert(UserConnectIdToBuy)
@@ -217,7 +220,7 @@
 
                   <div class="col-lg-4" id="murstdo">
                     <div class="portfolio-info" id="murstdoa">
-                      <div style="display: flex; margin-right: 30vh;"> <h3 style="margin-right: 12vh;"><button class="btn btn-danger">information</button></h3> <h3> <button class="btn btn-danger" style="display:flex" href="#modal" data-bs-toggle="modal" ><i class="bi bi-clipboard-check-fill"></i><p>&nbsp;Payer</p> </button></h3></div>
+                      <div style="display: flex; margin-right: 30vh;"> <h3 style="margin-right: 12vh;"><button class="btn btn-danger">information</button></h3> <h3 id='hidepaid'> <button class="btn btn-danger" style="display:flex" href="#modal" data-bs-toggle="modal" ><i class="bi bi-clipboard-check-fill"></i><p>&nbsp;Payer</p> </button></h3></div>
                       <ul>
                         <li style="color: aliceblue;"><strong> Nom</strong>: ${snapshot.val().NameOfstd}</li><hr style="color: blue;">             
                         <li style="color: aliceblue;"><strong>Date du début</strong>: ${snapshot.val().Datestart} à ${snapshot.val().Hourstart}</li><hr style="color: blue;">
