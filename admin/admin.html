@@ -9,7 +9,7 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="admin.css">
     <title>Administration</title>
-    <link href="./../assets/img/favicon.svg" rel="icon">
+    <link href="./../assets/img/myevents299.jpeg" rel="icon">
 
 </head>
 
@@ -28,7 +28,7 @@
                 </button>
                 <!-- Brand -->
                 <a class="" href="#">
-                    <img src="./../assets/img/mylogo1.jpeg" alt="...">
+                    <img src="./../assets/img/myevents299.jpeg" alt="...">
                 </a>
                 <!-- User menu (mobile) -->
                 <div class="navbar-user d-lg-none">
@@ -154,7 +154,7 @@
                             <!-- Actions -->
                             <div class="col-sm-6 col-12 text-sm-end">
                                 <div class="mx-n1">
-                                    <a href="#" class="btn d-inline-flex btn-sm btn-neutral border-base mx-1">
+                                    <a href="#" class="btn d-inline-flex btn-sm btn-neutral border-base mx-1" data-toggle="modal" data-target="#headerUpdate">
                                         <span class=" pe-2">
                                             <i class="bi bi-pencil"></i>
                                         </span>
@@ -310,6 +310,40 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="headerUpdate" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Modification de l'acceuil</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <label for="recipient-name" class="col-form-label">Photo:</label>
+                <input type="file" class="form-control" id="recipient-nameheader">
+                <div class="form-group"> 
+                    <label for="message-text" class="col-form-label">Premeier texte d'acceuil</label>
+                    <p style="text-align: start !important;" id="TextCounpt1"></p>
+                    <textarea  class="form-control" id="message-text1" style="height: 100px;" oninput="countCharacters1()"
+                    maxlength="75" minlength="50" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="message-text" class="col-form-label">Deuxième texte d'acceuil:</label>
+                    <p style="text-align: start !important;" id="TextCounpt"></p>
+                    <textarea  class="form-control" id="message-text2" style="height: 100px;" oninput="countCharacters()"
+                    maxlength="213" minlength="200" required></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal" id="idheaderUpdate">Fermer</button>
+                <button type="button" class="btn btn-secondary" id="closeheaderUpdate">
+                    Mettre à jour</button> 
+            </div>
+        </div>
+    </div>
+</div>
     <div class="modal fade" id="exampleModalCenterAllMessage" tabindex="-1" role="dialog"
         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -344,7 +378,38 @@
             </div>
         </div>
     </div>
-   
+   <script>
+        function countCharacters1() {
+        var textarea = document.getElementById("message-text1");
+        var TextCounpt = document.getElementById("TextCounpt1")
+        var  maxLength = parseInt(textarea.getAttribute("maxlength"));
+        const currentLength = textarea.value.length;
+        const remainingChars = maxLength - currentLength;
+        TextCounpt.textContent = remainingChars + " caractères restants";
+        if (textarea.checkValidity()) {
+        textarea.classList.remove("invalid-input");
+        textarea.classList.add("valid-input");
+        } else {
+        textarea.classList.remove("valid-input");
+        textarea.classList.add("invalid-input");
+        }
+      }
+      function countCharacters() {
+        var textarea1 = document.getElementById("message-text2");
+        var TextCounpt1 = document.getElementById("TextCounpt")
+        var  maxLength = parseInt(textarea1.getAttribute("maxlength"));
+        const currentLength = textarea1.value.length;
+        const remainingChars = maxLength - currentLength;
+        TextCounpt1.textContent = remainingChars + " caractères restants";
+        if (textarea1.checkValidity()) {
+            textarea1.classList.remove("invalid-input");
+            textarea1.classList.add("valid-input");
+        } else {
+            textarea1.classList.remove("valid-input");
+            textarea1.classList.add("invalid-input");
+        }
+      }
+   </script>
     <script type="module">
 
         // Import the functions you need from the SDKs you need
@@ -354,13 +419,13 @@
 
         // Your web app's Firebase configuration
         const firebaseConfig = {
-            apiKey: "AIzaSyDNv561jOOEoLeB0tbWRLz2NKq-Vf31x0s",
-            authDomain: "o-programme.firebaseapp.com",
-            databaseURL: "https://o-programme-default-rtdb.firebaseio.com",
-            projectId: "o-programme",
-            storageBucket: "o-programme.appspot.com",
-            messagingSenderId: "327173970134",
-            appId: "1:327173970134:web:c40a53b5500d1adaa11177"
+        apiKey: "AIzaSyCjj9lfPecoKZsYxmFj3Xp9JdADHOFFP20",
+        authDomain: "myevents229-40d8e.firebaseapp.com",
+        databaseURL: "https://myevents229-40d8e-default-rtdb.firebaseio.com",
+        projectId: "myevents229-40d8e",
+        storageBucket: "myevents229-40d8e.appspot.com",
+        messagingSenderId: "92280528400",
+        appId: "1:92280528400:web:509c44ab9518574865f495"
         };
 
         // Initialize Firebase
@@ -378,7 +443,8 @@
             get,
         } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
 
-        import { getStorage, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-storage.js"
+        import { getStorage, getDownloadURL 
+        } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-storage.js"
 
         const db = getDatabase();
 
@@ -391,7 +457,10 @@
         var genboxprixstart = document.getElementById("exampleFormControlSelect1start");
         var genboxprixend = document.getElementById("exampleFormControlSelect1end");
         var genboxtextarea = document.getElementById("message-text");
-        var IdtheNumberMessage = document.getElementById("idtheNumberMessage");
+        var IdtheNumberMessage = document.getElementById("idtheNumberMessage"); 
+        var TextHeader1 = document.getElementById("message-text1");
+        var TextHeader2 = document.getElementById("message-text2");
+        var CloseheaderUpdate = document.getElementById("closeheaderUpdate");
 
 
         var IdEmailMessage = document.getElementById("idEmailMessage");
@@ -416,26 +485,151 @@
 
         //--------------function to set image--------//
 
-        var urlImage = []
-        function uploadImage() {
-            firebase.initializeApp(firebaseConfig);
-            const ref = firebase.storage().ref();
-            const file = document.querySelector("#recipient-name2").files[0];
-            const name = +new Date() + "-" + file.name;
-            const metadata = {
-                contentType: file.type
+        //--------------function to set image--------//
+
+        var urlImageheader = []
+        var inputElementw = document.getElementById("recipient-nameheader");
+        // Ajoutez un gestionnaire d'événements pour écouter le changement de fichier   
+        inputElementw.addEventListener("change", handleFilesw, false);
+
+        function handleFilesw() {
+        // Récupérez le fichier sélectionné par l'utilisateur
+        var file = this.files[0];
+        //console.log("Fichier sélectionné : ", file);
+
+        // Créez une nouvelle instance de FileReader
+        var reader = new FileReader();
+
+        // Ajoutez un gestionnaire d'événements pour écouter la fin de la lecture du fichier
+        reader.onload = function(event) {
+            // Créez une nouvelle instance d'image
+            var img = new Image();
+
+            // Définissez le gestionnaire d'événements pour lorsque l'image est chargée
+            img.onload = function() {
+            const minWidth = 300; // La largeur minimale souhaitée
+            const minHeight = 300; // La longeur minimale souhaitée
+            if (img.width >= minWidth && img.height >= minHeight) { 
+            // Créez un élément canvas
+            var canvas = document.createElement('canvas');
+            var context = canvas.getContext('2d');
+
+            // Déterminez les dimensions de l'image redimensionnée
+            var maxWidth = 800;
+            var maxHeight = 600;
+            var width = img.width;
+            var height = img.height;
+
+            // Vérifiez si l'image doit être redimensionnée
+            if (width > maxWidth || height > maxHeight) {
+                // Calculez le facteur de redimensionnement
+                var ratio = Math.min(maxWidth / width, maxHeight / height);
+
+                // Appliquez le redimensionnement
+                width *= ratio;
+                height *= ratio;
+            }
+
+            // Définissez les dimensions du canvas
+            canvas.width = width;
+            canvas.height = height;
+
+            // Dessinez l'image sur le canvas avec les nouvelles dimensions
+            context.drawImage(img, 0, 0, width, height);
+
+            // Obtenez le contenu de l'image redimensionnée sous forme de base64
+            var base64Contentw = canvas.toDataURL('image/jpeg');
+            base64Contentw = base64Contentw.replace(/^data:image\/jpeg;base64,/, '');
+            //console.log("Contenu en base64 : ", base64Content);
+            urlImageheader.push(base64Contentw)
+            // ...
+            }else{
+                Swal.showValidationMessage(i18next.t('IDTRANSLATEFORM105'));
+                //alert(`Votre image est trop pétite. Veuillez sélectionner une image d'au moins 300x300 pixels.`)
+                inputElementw.value = ""
+            }
             };
-            const task = ref.child(name).put(file, metadata); task
-                .then(snapshot => snapshot.ref.getDownloadURL())
-                .then(url => {
-                    console.log(url);
-                    urlImage.push(url)
-                    setTimeout(() => {
-                        insertData()
-                    }, 5000)
-                })
-                .catch(console.error);
+
+            // Définissez la source de l'image comme le contenu du fichier
+            img.src = event.target.result;
+        };
+
+        // Commencez la lecture du fichier
+        reader.readAsDataURL(file);
         }
+
+        var urlImage = []
+        var inputElement = document.getElementById("recipient-name2");
+        // Ajoutez un gestionnaire d'événements pour écouter le changement de fichier  recipient-nameheader 
+        inputElement.addEventListener("change", handleFiles, false);
+
+        function handleFiles() {
+        // Récupérez le fichier sélectionné par l'utilisateur
+        var file = this.files[0];
+        console.log("Fichier sélectionné : ", file);
+
+        // Créez une nouvelle instance de FileReader
+        var reader = new FileReader();
+
+        // Ajoutez un gestionnaire d'événements pour écouter la fin de la lecture du fichier
+        reader.onload = function(event) {
+            // Créez une nouvelle instance d'image
+            var img = new Image();
+
+            // Définissez le gestionnaire d'événements pour lorsque l'image est chargée
+            img.onload = function() {
+            const minWidth = 300; // La largeur minimale souhaitée
+            const minHeight = 300; // La longeur minimale souhaitée
+            if (img.width >= minWidth && img.height >= minHeight) { 
+            // Créez un élément canvas
+            var canvas = document.createElement('canvas');
+            var context = canvas.getContext('2d');
+
+            // Déterminez les dimensions de l'image redimensionnée
+            var maxWidth = 800;
+            var maxHeight = 600;
+            var width = img.width;
+            var height = img.height;
+
+            // Vérifiez si l'image doit être redimensionnée
+            if (width > maxWidth || height > maxHeight) {
+                // Calculez le facteur de redimensionnement
+                var ratio = Math.min(maxWidth / width, maxHeight / height);
+
+                // Appliquez le redimensionnement
+                width *= ratio;
+                height *= ratio;
+            }
+
+            // Définissez les dimensions du canvas
+            canvas.width = width;
+            canvas.height = height;
+
+            // Dessinez l'image sur le canvas avec les nouvelles dimensions
+            context.drawImage(img, 0, 0, width, height);
+
+            // Obtenez le contenu de l'image redimensionnée sous forme de base64
+            var base64Content = canvas.toDataURL('image/jpeg');
+            base64Content = base64Content.replace(/^data:image\/jpeg;base64,/, '');
+            console.log("Contenu en base64 : ", base64Content);
+            urlImage.push(base64Content)
+            // ...
+            }else{
+                Swal.showValidationMessage(i18next.t('IDTRANSLATEFORM105'));
+                //alert(`Votre image est trop pétite. Veuillez sélectionner une image d'au moins 300x300 pixels.`)
+                inputElement.value = ""
+            }
+            };
+
+            // Définissez la source de l'image comme le contenu du fichier
+            img.src = event.target.result;
+        };
+
+        // Commencez la lecture du fichier
+        reader.readAsDataURL(file);
+        }
+
+   
         const errorMsgElement = document.querySelector('span#errorMsg');
 
         //---------function to insert the product in the site--------//
@@ -530,6 +724,23 @@
                 });
         }
 
+        //function to update the header text
+
+        function updateheader(){
+            var idheader = "3543"
+            update(ref(db, "Header/" + idheader), {
+                NameOfstd: TextHeader1.value,
+                Genboxtextarea: TextHeader2.value,
+                RollNo: urlImageheader[0],
+                
+            })
+                .then(() => {
+                    window.location.reload();
+                })
+                .catch((error) => {
+                    alert("les données ne sont pas mise à jour " + error);
+                });
+        }
         //--------------delete data-----------------//
         function deletedata() {
             const last = tableTakeIdproduct.slice(-1).pop();
@@ -784,12 +995,13 @@
 
 
              
-        //--------------function to connect admin-----------------//
+        //--------------function to connect admin-----------------// 
         //--------------asign btn-----------------//
-        insbtn.addEventListener("click", uploadImage,);
+        insbtn.addEventListener("click", insertData);
         Idseleectdata.addEventListener("click", seleectData);
         updbtn.addEventListener("click", updatedata);
         delbtn.addEventListener("click", deletedata);
+        CloseheaderUpdate.addEventListener("click", updateheader);
 
     </script>
     <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>

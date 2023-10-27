@@ -10,7 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.svg" rel="icon">
+  <link href="assets/img/myevents299.jpeg" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -38,7 +38,10 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top " style="background-color: #5846f9;">
     <div class="container d-flex align-items-center justify-content-between">
-      <h1 class="logo"><a href="index.html"><img src="assets/img/mylogo1.jpeg" class="img-fluid animated" alt=""></a></h1>
+      <h1 class="logo"><a href="index.html">
+        <img src="assets/img/myevents299.jpeg" class="img-fluid animated" alt=""
+        style="width: 17vh; height: 12vh; border-radius: 5px;">
+      </a></h1>
 
       <nav id="navbar" class="navbar" >
         <ul>
@@ -113,7 +116,7 @@
               <div class="info-box  mb-4">
                 <i class="bx bx-envelope"></i>
                 <h3>Email</h3>
-                <p>auprogramme4@gmail.com
+                <p>myevents229@gmail.com
                 </p>
               </div>
             </div>
@@ -236,7 +239,8 @@
         <div class="row">
 
           <div class="col-lg-4 col-md-6 footer-contact">
-            <h3><img src="assets/img/mylogo1.jpeg" class="img-fluid animated" alt=""></h3>
+            <h3><img src="assets/img/myevents299.jpeg" class="img-fluid animated" alt=""
+              style="width: 26vh; height: 18vh; border-radius: 5px;"></h3>
             <p>
              Cotonou<br>
              Bénin <br>
@@ -271,10 +275,10 @@
       <div class="copyright-wrap d-md-flex py-4">
         <div class="me-md-auto text-center text-md-start">
           <div class="copyright">
-            &copy; Copyright <strong><span>AU-PROGRAMME</span></strong>. All Rights Reserved
+            &copy; Copyright <strong><span>myevents229</span></strong>. All Rights Reserved
           </div>
           <div class="credits">
-            Designed by <a href="https://bootstrapmade.com/">AU-PROGRAMME</a>
+            Designed by <a href="">myevents229</a>
           </div>
         </div>
         <div class="social-links text-center text-md-right pt-3 pt-md-0">
@@ -301,13 +305,13 @@
 
     // Your web app's Firebase configuration
     const firebaseConfig = {
-        apiKey: "AIzaSyDNv561jOOEoLeB0tbWRLz2NKq-Vf31x0s",
-    authDomain: "o-programme.firebaseapp.com",
-    databaseURL: "https://o-programme-default-rtdb.firebaseio.com",
-    projectId: "o-programme",
-    storageBucket: "o-programme.appspot.com",
-    messagingSenderId: "327173970134",
-    appId: "1:327173970134:web:c40a53b5500d1adaa11177"
+       apiKey: "AIzaSyCjj9lfPecoKZsYxmFj3Xp9JdADHOFFP20",
+        authDomain: "myevents229-40d8e.firebaseapp.com",
+        databaseURL: "https://myevents229-40d8e-default-rtdb.firebaseio.com",
+        projectId: "myevents229-40d8e",
+        storageBucket: "myevents229-40d8e.appspot.com",
+        messagingSenderId: "92280528400",
+        appId: "1:92280528400:web:509c44ab9518574865f495"
     };
 
     // Initialize Firebase
@@ -419,16 +423,18 @@
             trow.addEventListener('mouseover', function() {
               var monElementy = k.Idproduct
               tableauTotakeidd.push(monElementy)
+              
               const last = tableauTotakeidd.slice(-1).pop();
               localStorage.setItem("storageNamey", last);
           });
+          var photoDataUrl = 'data:image/png;base64,' + k.RollNo;
             trow.setAttribute("style", " margin: 20px;display: flex; align-items: center;flex-direction: column;justify-content: space-between;flex-wrap: wrap;");
             trow.innerHTML =
               `
             <div class="portfolio-wrap toadvancer" style="height: 40vh;">
               <span class="advanced">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <i class="bi bi-check-circle"></i> Disponible </span>
               <span class="advancedshare">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <i class="bi bi-geo-alt-fill"></i>&nbsp;  ${k.Category}<br><br>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <i class="bi bi-calendar2-check-fill"></i> &nbsp; ${k.Datestart}</span>
-              <img src="${k.RollNo}" class="img-fluid" alt="" style="height: 42vh; width: 50vh;">             
+              <img src="${photoDataUrl}" class="img-fluid" alt="" style="height: 42vh; width: 50vh;">             
               <div class="portfolio-info" style="background-color: black;">
                 <h4>${k.NameOfstd}</h4>
                 <span style="display: inline-flex;"> <p style="width: 20vh !important; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;"><strong style="color: white; font-size: 17px;"> </strong> ${k.Genboxtextarea}</p>&nbsp;</span>

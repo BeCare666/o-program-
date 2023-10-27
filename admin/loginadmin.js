@@ -1,4 +1,4 @@
-var usernamep = "auprogramme"
+var usernamep = "Events229"
 var passwordp = "#Azerty007@_#"
 var tableauTotakeidd = []
 function connect() {
@@ -9,7 +9,7 @@ function connect() {
     if (username === usernamep && password === passwordp) {
         //console.log('kodlsjfnsb,')
         setTimeout(() => {
-            alert("AU-PROGRAMME s'est bien connecté")
+            alert("Events229 s'est bien connecté")
             var codesecret = "YESDATA2023"
             tableauTotakeidd.push(codesecret)
             const lastk = tableauTotakeidd.slice(-1).pop();
